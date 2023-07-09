@@ -26,8 +26,8 @@ class TrailerPlayScreen extends StatelessWidget {
             backgroundColor: kBlack,
             leading: IconButton(
               onPressed: () {
+                Navigator.pop(context);
                 model.videoPlayerController!.pause();
-                Get.back();
               },
               icon: Icon(
                 Icons.clear,

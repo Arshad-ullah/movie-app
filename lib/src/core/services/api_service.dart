@@ -7,17 +7,23 @@ class ApiService {
   String baseUrl = 'https://api.themoviedb.org/3/movie';
   fetchUpcomingMovies() async {
     String url = '$baseUrl/upcoming?api_key=$API_Key';
+    print("testing:1");
 
     try {
       final response = await http.get(Uri.parse(url));
+      print("testing:2");
+
+      print("status code :" + response.statusCode.toString());
 
       if (response.statusCode == 200) {
+        print("testing:3");
         final data = json.decode(response.body);
         return data['results'];
       } else {
         print('Failed to fetch movies');
       }
     } catch (_) {
+      print('Failed to fetch movies' + _.toString());
       print('Failed to fetch movies');
     }
   }

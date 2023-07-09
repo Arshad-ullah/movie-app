@@ -44,7 +44,7 @@ class WatchViewModel extends BaseViewModal {
       notifyListeners();
       setState(ViewState.idle);
     } catch (e) {
-      print('Failed to fetch movies');
+      print('Failed to fetch movies' + e.toString());
       setState(ViewState.idle);
     }
   }

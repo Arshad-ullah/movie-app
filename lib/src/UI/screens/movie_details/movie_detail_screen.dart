@@ -15,7 +15,7 @@ import 'package:provider/provider.dart';
 
 import '../../../core/enums/enums.dart';
 import '../../widgets/custom_back_button.dart';
-import '../get_ticktet/get_ticket_screen.dart';
+import '../get_ticket/get_ticket_screen.dart';
 import 'movie_detail_viewmodel.dart';
 
 class MovieDetailScreen extends StatefulWidget {
